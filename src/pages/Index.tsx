@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { products, categories } from '@/data/products';
 import ProductList from '@/components/products/ProductList';
-import { Search, ChevronRight, Clock, ShoppingCart, FileCheck } from 'lucide-react';
+import { Search, ChevronRight, Clock, ShoppingCart, FileCheck, Check } from 'lucide-react';
 
 const Index = () => {
   const featuredProducts = products.filter(p => !p.requiresPrescription).slice(0, 4);

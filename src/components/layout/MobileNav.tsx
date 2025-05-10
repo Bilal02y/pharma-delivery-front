@@ -3,7 +3,7 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useAuth } from "@/contexts/AuthContext";
 import { 
-  Pills, 
+  Pill, 
   ClipboardList, 
   UserRound, 
   ShoppingCart, 
@@ -25,7 +25,7 @@ const MobileNav = () => {
     { 
       name: "Médicaments", 
       path: "/products", 
-      icon: <Pills className="h-5 w-5" /> 
+      icon: <Pill className="h-5 w-5" /> 
     },
     { 
       name: "Ordonnances", 
