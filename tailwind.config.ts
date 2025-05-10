@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,25 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+                // Couleurs personnalisées pour notre application
+                teal: {
+                    50: '#f0fdfa',
+                    100: '#ccfbf1',
+                    200: '#99f6e4',
+                    300: '#5eead4',
+                    400: '#2dd4bf',
+                    500: '#14b8a6',
+                    600: '#0d9488',
+                    700: '#0f766e',
+                    800: '#115e59',
+                    900: '#134e4a',
+                },
+                medical: {
+                    primary: '#4FB0AE', // Bleu-vert médical principal
+                    light: '#E6F7F6', // Fond léger
+                    dark: '#255A59', // Version foncée pour contraste
+                }
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
