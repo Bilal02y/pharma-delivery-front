@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
+import {
   NavigationMenu,
   NavigationMenuItem,
   NavigationMenuLink,
@@ -12,7 +12,7 @@ import { Button } from "@/components/ui/button";
 import { useAuth } from "@/contexts/AuthContext";
 import { useCart } from "@/contexts/CartContext";
 import { ShoppingCart, User, Menu, Search } from "lucide-react";
-import { 
+import {
   Sheet,
   SheetContent,
   SheetDescription,
@@ -27,12 +27,12 @@ const Header = () => {
   const { user, logout } = useAuth();
   const { totalItems } = useCart();
   const [isScrolled, setIsScrolled] = React.useState(false);
-  
+
   React.useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
     };
-    
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -43,11 +43,11 @@ const Header = () => {
         {/* Logo */}
         <Link to="/" className="flex items-center space-x-2">
           <div className="w-8 h-8 rounded-full bg-medical-primary flex items-center justify-center">
-            <span className="text-white font-bold text-lg">M</span>
+            <span className="text-white font-bold text-lg">A&P</span>
           </div>
-          <span className="font-bold text-xl text-medical-dark">MediQuick</span>
+          <span className="font-bold text-xl text-medical-dark">ALLO Pilules</span>
         </Link>
-        
+
         {/* Search Bar - Desktop */}
         <div className="hidden md:flex items-center max-w-md w-full mx-4">
           <div className="relative w-full">
@@ -58,7 +58,7 @@ const Header = () => {
             />
           </div>
         </div>
-        
+
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-4">
           <NavigationMenu>
@@ -88,7 +88,7 @@ const Header = () => {
               )}
             </NavigationMenuList>
           </NavigationMenu>
-          
+
           {/* Cart Button */}
           <Link to="/cart">
             <Button variant="outline" size="icon" className="relative">
@@ -100,7 +100,7 @@ const Header = () => {
               )}
             </Button>
           </Link>
-          
+
           {/* User Menu */}
           {user ? (
             <div className="flex items-center space-x-2">
@@ -119,7 +119,7 @@ const Header = () => {
             </Link>
           )}
         </div>
-        
+
         {/* Mobile Navigation */}
         <div className="flex md:hidden items-center space-x-3">
           {/* Cart Button */}
@@ -133,7 +133,7 @@ const Header = () => {
               )}
             </Button>
           </Link>
-          
+
           {/* Mobile Menu */}
           <Sheet>
             <SheetTrigger asChild>
